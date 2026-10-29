@@ -42,10 +42,12 @@ export async function POST(request: Request) {
         }, { status: 200 })
 
     } catch (error) {
-        console.log("Failed to update user status to accept messages")
+        console.log("An unexpected error occurs")
         return Response.json({
             success: false,
-            message: "Failed to update user status to accept messages"
-        }, { status: 500 })
+            message: "An unexpected error occurs"
+        }, {
+            status: 500
+        })
     }
 }
